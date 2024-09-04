@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@ethereum-attestation-service/eas-sdk": "^0.29.1",
+    "@openzeppelin/contracts": "^4.9.2",
+    "ethers": "^5.7.2",
+    "js-yaml": "^4.1.0",
+    "yamljs": "^0.3.0"
+  },
+  "scripts": {
+    "deploy": "npx hardhat run script/Deploy/deploy_registry.js --network dev && node script/create_schema.js",
+    "verify": "script/verify.sh",
+    "attest": "ts-node script/EASTest/Attest.t.ts",
+    "resolver_log": "node script/EASTest/SearchLog.js"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.4.5",
+    "hardhat": "^2.17.1",
+    "ts-node": "^10.9.1"
+  }
+}
